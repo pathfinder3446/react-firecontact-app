@@ -22,18 +22,7 @@ const ContactTable = () => {
             <td>Mark</td>
             <td>Otto</td>
             <td className="text-center">
-              <button className="bg-danger text-white">Delete</button>
-            </td>
-            <td className="text-center">
-              <AiFillEdit className="edit-icon" />
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td className="text-center">
-              <button className="bg-danger text-white">Delete</button>
+              <button className=" btn-del bg-danger text-white">Delete</button>
             </td>
             <td className="text-center">
               <AiFillEdit className="edit-icon" />
