@@ -5,10 +5,10 @@ import { BsFilePersonFill } from "react-icons/bs";
 
 const InputForm = () => {
   return (
-    <div className='inputcontainer'>
+    <div>
 
-      <div className="bg-light p-4 m-2">
-        <h1>ADD CONTACT</h1>
+      <div className="inputcontainer bg-light p-4 m-2">
+        <h1 className='mb-3'>ADD CONTACT</h1>
         <Form>
       <fieldset>
         <Form.Group className="mb-3">

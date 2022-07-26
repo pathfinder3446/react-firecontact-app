@@ -17,15 +17,26 @@
 
 .inputcontainer{
   border-radius: 20px;
-  border: solid red 1px;
+  border: solid white 1px;
+  width: 24rem;
 }
 
 .contact-header{
   border-radius: 10px;
-  height: 30px;
+  height: 50px;
+  padding-top: 4px;
+  width: 40rem;
 }
 
 .table{
   
   border-radius: 20px;
 }
+
+.edit-icon{
+  width: 48px;
+  height: 40px;
+  cursor:pointer;
+}
+
+
