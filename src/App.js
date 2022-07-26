@@ -1,15 +1,14 @@
 
 import './App.css';
-import Form from './components/form/Form';
-import Table from './components/table/Table';
+import InputForm from './components/form/InputForm';
+import ContactTable from './components/table/ContactTable';
 
 
 function App() {
   return (
-    <div className="App">
-      <Form />
-      <Table />
-      
+    <div  className="App d-flex ">
+        <InputForm  />
+        <ContactTable  />
     </div>
   );
 }

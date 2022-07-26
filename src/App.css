@@ -2,5 +2,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("https://picsum.photos/1600/900");
+  min-height: 100vh;
+  background-size: cover;
+ 
 }
 
+@media screen and (max-width: 720px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.inputcontainer{
+  border-radius: 20px;
+  border: solid red 1px;
+}
+
+.contact-header{
+  border-radius: 10px;
+  height: 30px;
+}
+
+.table{
+  
+  border-radius: 20px;
+}
