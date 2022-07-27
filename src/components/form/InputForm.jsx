@@ -8,7 +8,7 @@ const InputForm = () => {
     <div>
 
       <div className="inputcontainer bg-light p-4 m-2">
-        <h1 className='mb-3'>ADD CONTACT</h1>
+        <h1 className='mb-3 text-center'>ADD CONTACT</h1>
         <Form>
       <fieldset>
         <Form.Group className="mb-3">
