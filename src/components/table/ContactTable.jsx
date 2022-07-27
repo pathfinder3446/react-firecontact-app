@@ -1,5 +1,5 @@
 import Table from "react-bootstrap/Table";
-import { FiDelete } from "react-icons/fi";
+
 import { AiFillEdit } from "react-icons/ai";
 
 const ContactTable = () => {
