@@ -1,5 +1,4 @@
 import Table from "react-bootstrap/Table";
-
 import { AiFillEdit } from "react-icons/ai";
 
 const ContactTable = () => {
