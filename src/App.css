@@ -19,18 +19,23 @@
   border-radius: 20px;
   border: solid white 1px;
   width: 24rem;
+  height: 22rem;
+  
+  
 }
 
 .contact-header{
   border-radius: 10px;
   height: 60px;
   padding-top: 10px;
-  width: 40rem;
+  width: 46rem;
+  /* margin-left: 1rem; */
 }
 
 .table{
   
   border-radius: 20px;
+  /* margin-left: 1rem; */
 }
 
 .edit-icon{
