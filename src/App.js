@@ -2,6 +2,8 @@
 import './App.css';
 import InputForm from './components/form/InputForm';
 import ContactTable from './components/table/ContactTable';
+import { db } from "./utils/firebase";
+import { uid } from "uid";
 
 
 function App() {
