@@ -3,14 +3,14 @@ import { AiFillEdit } from "react-icons/ai";
 import { ref, remove } from "firebase/database";
 import { db } from "../../utils/firebase";
 import { useState } from "react";
-import { toastSuccessNotify } from "../../utils/customToastify";
+import { toastSuccessNotify, toastDangerNotify } from "../../utils/customToastify";
 
 const ContactTable = ({ contactList, edit, setEdit, editContact }) => {
   const [editInfo, setEditInfo] = useState({});
 
   const deleteContact = (id) => {
     remove(ref(db, "Contacts/" + id));
-    toastSuccessNotify("You deleted successfully");
+    toastDangerNotify("You deleted the contact");
   };
 
   return (
@@ -48,7 +48,7 @@ const ContactTable = ({ contactList, edit, setEdit, editContact }) => {
                   </td>
                   <td className="text-center">
                     <AiFillEdit
-                      onClick={()=> editContact(contact.id, contact.name, contact.phone, contact.gender)}
+                      onClick={()=> editContact(contact)}
                       className="edit-icon"
                     />
                   </td>
