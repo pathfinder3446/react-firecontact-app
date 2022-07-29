@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useState, useEffect } from 'react';
-import { set, ref, push, onValue } from 'firebase/database';
+import { set, ref, push, onValue,update } from 'firebase/database';
 import { db } from "../../utils/firebase";
 import { uid } from "uid";
 import {toastSuccessNotify} from '../../utils/customToastify';
@@ -46,6 +46,13 @@ const InputForm = ({contactList, setContactList, edit, setEdit}) => {
     })
 }, [])
 
+const UpdateUser=(info)=>{
+  const updates={}
+  updates["Contacts/"+info.id]=info
+
+  return update(ref(db),updates)
+
+}
 
   return (
     <div>
