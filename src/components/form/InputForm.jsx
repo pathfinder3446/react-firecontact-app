@@ -58,12 +58,13 @@ const UpdateUser=(info)=>{
     <div>
       <div className="inputcontainer bg-light p-4 m-2">
         <h1 className="mb-3 text-center">ADD CONTACT</h1>
-        <Form onSubmit= {writeToDatabase} >
+        <Form  onSubmit= {writeToDatabase} >
           <fieldset>
             <Form.Group className="mb-3">
               <Form.Control 
               id="TextInput" 
               placeholder="Name"
+              required
               value={name}
               onChange={(e) => setName(e.target.value)} />
             </Form.Group>
@@ -71,6 +72,7 @@ const UpdateUser=(info)=>{
               <Form.Control 
               id="NumberInput" 
               placeholder="Phone Number"
+              required
               value={phone}
               onChange={(e) => setPhone(e.target.value)} />
             </Form.Group>

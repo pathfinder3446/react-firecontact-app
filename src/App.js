@@ -12,6 +12,11 @@ function App() {
   const [contactList, setContactList] = useState([]);
   const [edit, setEdit] = useState(false)
 
+ const editUser = () =>{
+  setEdit(true)
+ }
+
+
   return (
     <div  className="App d-flex ">
         <InputForm  
@@ -23,6 +28,7 @@ function App() {
          contactList={contactList}
          edit={edit}
           setEdit={setEdit}
+          editUser={editUser}
          />
          <ToastContainer />
     </div>
