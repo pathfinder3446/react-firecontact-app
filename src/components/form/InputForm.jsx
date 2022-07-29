@@ -6,7 +6,7 @@ import { db } from "../../utils/firebase";
 import { uid } from "uid";
 import {toastSuccessNotify} from '../../utils/customToastify';
 
-const InputForm = ({contactList, setContactList}) => {
+const InputForm = ({contactList, setContactList, edit, setEdit}) => {
 
     const [gender, setGender] = useState('');
     const [name, setName] = useState("");
@@ -79,7 +79,12 @@ const InputForm = ({contactList, setContactList}) => {
                 <option>Other</option>
               </Form.Select>
             </Form.Group>
-            <Button type="submit">Submit</Button>
+            { edit ? (
+              <Button type="submit">UPDATE CONTACT</Button>
+            ) : (
+              <Button type="submit">ADD CONTACT</Button>
+            )}
+            
           </fieldset>
         </Form>
       </div>

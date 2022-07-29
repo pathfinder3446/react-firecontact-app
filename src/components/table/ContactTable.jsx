@@ -5,7 +5,7 @@ import { db } from "../../utils/firebase";
 import { useState } from "react";
 import {toastSuccessNotify} from '../../utils/customToastify';
 
-const ContactTable = ({contactList}) => {
+const ContactTable = ({contactList, edit, setEdit}) => {
   const [editInfo, setEditInfo] = useState({});
 
   const deleteContact = (id) => {
@@ -14,10 +14,16 @@ const ContactTable = ({contactList}) => {
    
   };
 
-//   const editContact = (id,name,phone,gender) => {
-//     setEditInfo({id:id,name:name,phone:phone,gender:gender})
-    
-// };
+const editContact = (contact) =>{
+  setEdit(true);
+  setEditInfo({
+    name: contact.name,
+    phone: contact.phone,
+    gender: contact.gender,
+    id: contact.id
+  })
+
+}
 
 
   return (
@@ -33,8 +39,8 @@ const ContactTable = ({contactList}) => {
             <th className="text-center">Edit</th>
           </tr>
         </thead>
-        <tbody>
-          {contactList.map((contact, id) =>{
+        <tbody>        
+            {contactList.map((contact, id) =>{
             return (
               <tr key={id}>
             <td>{contact.name}</td>
@@ -47,12 +53,14 @@ const ContactTable = ({contactList}) => {
             </td>
             <td className="text-center">
               <AiFillEdit 
-              // onClick={()=> editContact(contact.id, contact.name, contact.phone, contact.gender)} 
+              onClick={()=> editContact(contact)} 
               className="edit-icon" />
             </td>
           </tr>
             )
           })}
+          )
+          
           
         </tbody>
       </Table>

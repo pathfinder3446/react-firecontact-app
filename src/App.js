@@ -10,14 +10,19 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
   const [contactList, setContactList] = useState([]);
+  const [edit, setEdit] = useState(false)
 
   return (
     <div  className="App d-flex ">
         <InputForm  
           setContactList={setContactList} 
-          contactList={contactList} />
+          contactList={contactList}
+          edit={edit}
+          setEdit={setEdit} />
         <ContactTable
          contactList={contactList}
+         edit={edit}
+          setEdit={setEdit}
          />
          <ToastContainer />
     </div>
